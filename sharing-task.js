@@ -36,6 +36,12 @@ reusable functions that solve specific tasks. This activity encourages:
 // 3. Capitalize the role if needed.
 // 4. Return the result.
 
+function generateAttendeeBadge(name, role){ // Uses two parameters: name and role
+    let capitalizedRole = role.charAt(0).toUpperCase() + role.slice(1);
+    return `Name: ${name}, Role: ${capitalizedRole}`; // Capitalizes the first letter of the role
+}
+console.log(generateAttendeeBadge("Maddie", "speaker")); // Output: "Name: Maddie, Role: Speaker"
+console.log(generateAttendeeBadge("Mike", "attendee")); // Output: "Name: Mike, Role: Attendee"
 
 // ============================================
 // 🧩 Task 2: Calculate Event Cost
@@ -44,6 +50,19 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Takes number of attendees and cost per attendee.
 // - Applies a 10% discount if attendees exceed 100.
 // - Returns the total cost.
+
+function calculateTotalEventCost(attendees, costPerAttendee) {
+  let totalEventCost = attendees * costPerAttendee; // multiplies attendees by cost per attendee to get total cost
+
+  if (attendees > 100) { // checks if attendees is over 100
+    totalEventCost = totalEventCost * 0.9; // applies 10% discount
+  }
+
+  return totalEventCost;
+}
+
+console.log(calculateTotalEventCost(140, 20)); // output: 2520
+console.log(calculateTotalEventCost(60, 20)); // output: 1200 // Discount not applied
 
 // Steps:
 // 1. Multiply attendees by cost.
@@ -63,6 +82,17 @@ reusable functions that solve specific tasks. This activity encourages:
 // Steps:
 // 1. Check if the string includes both "@" and ".".
 // 2. Return true or false accordingly.
+
+function validateEmail(email) {
+  if (email.includes("@") && email.includes(".")) { // checks if email includes both "@" and "."
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(validateEmail('maddy@example.com'))
+console.log(validateEmail('maddyexample.com'))
+console.log(validateEmail('maddy@@example.com'))
 
 
 // ============================================

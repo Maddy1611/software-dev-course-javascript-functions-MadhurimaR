@@ -37,14 +37,37 @@ console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
 
+// Improved code with function
+function greetUser(name) {
+    return `Welcome, ${name}!`;
+}
+console.log(greetUser("Alice"));
+console.log(greetUser("Bob"));
+console.log(greetUser("Charlie"));
+
 // Script 2 - Sum calculation
 let num1 = 5, num2 = 10;
 let sum = num1 + num2;
 console.log("The sum of 5 and 10 is " + sum);
 
+// Improved code with function
+function calculateSum(a, b) {
+   return a + b;
+}
+let totalSum = calculateSum(num1, num2);
+console.log("The total sum of 5 and 10 is " + calculateSum(num1, num2));
+
 // Script 3 - Product calculation
 let product = num1 * num2;
 console.log("The product of 5 and 10 is " + product);
+
+// Improved code with function
+function calculateProduct(a, b) {
+    return a * b;
+}
+let numProduct = calculateProduct(num1, num2);
+console.log(`The product of ${num1} and ${num2} is ${product}`);
+
 
 // Script 4 - Print names from a list
 let names = ["Alice", "Bob", "Charlie"];
@@ -52,6 +75,16 @@ console.log("Names in the list:");
 for (let i = 0; i < names.length; i++) {
     console.log(names[i]);
 }
+
+// Improved code with function
+function printNames(nameList) {
+      console.log("Names in the list:");
+      for (let i = 0; i < nameList.length; i++) {
+            console.log(nameList[i]);
+      }
+}
+let nameList = ['Alice', 'Bob', 'Charlie'];
+printNames(names);
 
 /*
 ===========================================
